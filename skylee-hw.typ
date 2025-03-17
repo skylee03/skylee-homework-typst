@@ -1,6 +1,6 @@
 #let _shw-problem-counter = counter("_shw:problem-counter")
 
-#let problem = (content) => {
+#let problem = (content) => context {
   _shw-problem-counter.update(n => n + 1)
   grid(
     columns: (auto, 1fr),
