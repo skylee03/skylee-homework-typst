@@ -1,11 +1,11 @@
 #let _shw-problem-counter = counter("_shw:problem-counter")
 
-#let problem = (content) => context {
+#let problem = (content) => {
   _shw-problem-counter.update(n => n + 1)
   grid(
     columns: (auto, 1fr),
     column-gutter: 1em,
-    _shw-problem-counter.display("1."),
+    context { _shw-problem-counter.display("1.") },
     content
   )
 }
